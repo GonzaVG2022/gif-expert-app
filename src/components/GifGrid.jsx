@@ -1,16 +1,27 @@
-import { getGifs } from '../helpers/getGifs';
-import {useEffect} from 'react';
+import { GifItem } from './GifItem';
+import { useFechGifs } from '../hooks/useFechGifs';
+
 export const GifGrid = ({category}) => {
 
-
-useEffect( () => {
-  getGifs(category);
-}, [ ])  
+  const {images, isLoading} = useFechGifs( category );
+  console.log({images, isLoading})
+   
 
  
   return (
     <>
     <h3>{category}</h3>
+    
+      {
+        images.map((images) => (
+           <GifItem
+              key={images.id}
+              {...images}
+           />
+          ))
+      }
+    
+   
     </>
   )
 }

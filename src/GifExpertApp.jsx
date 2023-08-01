@@ -11,7 +11,7 @@ const GifExpertApp = () => {
       return
     }; 
     
-    setCategories([...caterogies,newCategory]) //operador spread
+    setCategories([newCategory,...caterogies]) //operador spread
     //  console.log(newCategory)
   }
   
