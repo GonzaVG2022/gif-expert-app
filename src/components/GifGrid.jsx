@@ -6,12 +6,13 @@ export const GifGrid = ({category}) => {
   const {images, isLoading} = useFechGifs( category );
   console.log({images, isLoading})
    
-
- 
   return (
     <>
     <h3>{category}</h3>
-    
+    {
+      //<Loading isLoading={isLoading}/> crear componente personalizado
+      isLoading && <h4>...Cargando...</h4>
+    }
       {
         images.map((images) => (
            <GifItem
@@ -20,8 +21,6 @@ export const GifGrid = ({category}) => {
            />
           ))
       }
-    
-   
     </>
   )
 }

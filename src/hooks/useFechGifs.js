@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { getGifs } from "../helpers/getGifs";
 
-
-
 export const useFechGifs = ( category ) => {
   const [images, setImage] = useState([]);
   const [isLoading, setIsLoading] = useState(true)
@@ -13,11 +11,10 @@ export const useFechGifs = ( category ) => {
     setIsLoading(false);
   }
 
-
   useEffect( () => {
     getImages()
-
-  }, [ ]) 
+ }, [ ]) 
+ 
   return {
     images,
     isLoading
