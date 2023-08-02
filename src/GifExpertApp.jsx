@@ -6,7 +6,7 @@ import { AddCategory, GifGrid } from './components';
 
 
 const GifExpertApp = () => {
-  const [caterogies, setCategories] = useState(['One Punch']);
+  const [caterogies, setCategories] = useState(['Dragon Ball']);
   const onAddCategory = (newCategory) =>{
     if(caterogies.includes(newCategory)){
       alert('ya existe la categoria');
