@@ -1,2 +1,3 @@
 # gif-expert-app
-# practica consumo de api " https://developers.giphy.com/ "
+# practica consumo de api mediante uso de hooks " https://developers.giphy.com/ "
+# test jest y testing-library/react
