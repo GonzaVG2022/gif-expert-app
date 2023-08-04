@@ -2,9 +2,6 @@ import { useState } from 'react'
 import './styles.css'
 import { AddCategory, GifGrid } from './components';
 
-
-
-
 const GifExpertApp = () => {
   const [caterogies, setCategories] = useState(['Dragon Ball']);
   const onAddCategory = (newCategory) =>{

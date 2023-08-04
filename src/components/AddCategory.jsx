@@ -12,11 +12,11 @@ const onSubmit = (event) =>{
     event.preventDefault();
     if( inputValue.trim().length < 1 ) return; //evito mandar vacio
     // setCategories(caterogies =>[...caterogies,inputValue])//llamo al setCategori ya que tengo la info respectiva
-    onNewCategory(inputValue.trim())
-    setInputValue('')
+    onNewCategory(inputValue.trim());
+    setInputValue('');
   }
     return (
-    <form onSubmit={ onSubmit}>
+    <form onSubmit={ onSubmit} aria-label="form">
     <input 
         type="text"
         placeholder="Buscar Gifs"
